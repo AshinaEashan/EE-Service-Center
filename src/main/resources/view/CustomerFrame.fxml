@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="employeePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="783.0" prefWidth="1338.0" style="-fx-background-color: #2eaa9e;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeController">
+<BorderPane fx:id="customerPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="783.0" prefWidth="1338.0" style="-fx-background-color: #2eaa9e;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerController">
    <center>
       <GridPane BorderPane.alignment="CENTER">
          <columnConstraints>
@@ -67,7 +67,7 @@
                <children>
                   <VBox alignment="TOP_CENTER" prefHeight="632.0" spacing="50.0" style="-fx-background-color: #6fcec9; -fx-background-radius: 20;" GridPane.columnIndex="1">
                      <children>
-                        <JFXButton fx:id="updateBtn" buttonType="RAISED" prefHeight="58.0" prefWidth="295.0" style="-fx-background-color: #fcb900; -fx-background-radius: 50;" text="Update" textFill="WHITE">
+                        <JFXButton fx:id="deleteBtn" buttonType="RAISED" onAction="#deleteBtn" prefHeight="58.0" prefWidth="295.0" style="-fx-background-color: #fcb900; -fx-background-radius: 50;" text="Delete" textFill="WHITE">
                            <font>
                               <Font size="27.0" />
                            </font>
@@ -75,7 +75,15 @@
                               <Shadow blurType="GAUSSIAN" color="#000000da" height="192.04" radius="84.63499999999999" width="148.5" />
                            </effect>
                         </JFXButton>
-                        <JFXButton fx:id="addEmployeeBtn" buttonType="RAISED" prefHeight="49.0" prefWidth="292.0" style="-fx-background-color: #fcb900; -fx-background-radius: 50;" text="Add Employee" textFill="WHITE">
+                        <JFXButton fx:id="updateBtn" buttonType="RAISED" layoutX="14.0" layoutY="124.0" prefHeight="49.0" prefWidth="292.0" style="-fx-background-color: #fcb900; -fx-background-radius: 50;" text="Update" textFill="WHITE">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                           <effect>
+                              <Shadow blurType="GAUSSIAN" color="#000000da" height="192.04" radius="84.63499999999999" width="148.5" />
+                           </effect>
+                        </JFXButton>
+                        <JFXButton fx:id="addCustomerBtn" buttonType="RAISED" layoutX="14.0" layoutY="231.0" prefHeight="49.0" prefWidth="292.0" style="-fx-background-color: #fcb900; -fx-background-radius: 50;" text="Add Customer" textFill="WHITE">
                            <font>
                               <Font size="27.0" />
                            </font>
@@ -89,23 +97,17 @@
                      </padding>
                   </VBox>
                   <GridPane>
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints maxHeight="325.0" minHeight="10.0" prefHeight="119.66667175292969" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="545.3333282470703" minHeight="10.0" prefHeight="545.3333282470703" vgrow="SOMETIMES" />
-                    </rowConstraints>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="323.66668701171875" minHeight="10.0" prefHeight="105.00001525878906" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="575.9999847412109" minHeight="10.0" prefHeight="559.9999847412109" vgrow="SOMETIMES" />
+                     </rowConstraints>
                      <children>
-                        <TableView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
-                          <columns>
-                            <TableColumn prefWidth="75.0" text="C1" />
-                            <TableColumn prefWidth="75.0" text="C2" />
-                          </columns>
-                        </TableView>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                            <children>
-                              <JFXTextField fx:id="employeeSearchField" prefHeight="61.0" prefWidth="1191.0" promptText="Search Employee" style="-fx-background-color: white; -fx-background-radius: 8;" />
+                              <JFXTextField fx:id="customerSearchField" prefHeight="61.0" prefWidth="1191.0" promptText="Search By ID" style="-fx-background-color: white; -fx-background-radius: 8;" />
                               <JFXButton fx:id="searchBtn" buttonType="RAISED" prefHeight="57.0" prefWidth="595.0" style="-fx-background-color: #fcb900; -fx-background-radius: 50;" text="Search" textFill="WHITE">
                                  <font>
                                     <Font size="27.0" />
@@ -119,6 +121,12 @@
                               <Insets right="50.0" />
                            </padding>
                         </HBox>
+                        <TableView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="C1" />
+                              <TableColumn prefWidth="75.0" text="C2" />
+                           </columns>
+                        </TableView>
                      </children>
                   </GridPane>
                </children>
@@ -156,7 +164,7 @@
                   </JFXButton>
                   <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="179.0" layoutY="11.0" prefHeight="60.0" prefWidth="81.0" text=" ">
                      <graphic>
-                        <ImageView fitHeight="47.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="userBtn" fitHeight="47.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/profile-pic.png" />
                            </image>

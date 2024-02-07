@@ -16,8 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="783.0" prefWidth="1338.0" style="-fx-background-color: #2eaa9e;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
+<BorderPane fx:id="dashboardPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="783.0" prefWidth="1338.0" style="-fx-background-color: #2eaa9e;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
    <center>
       <GridPane BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -31,7 +30,7 @@
          <children>
             <HBox alignment="CENTER" maxHeight="60.0" minHeight="60.0" prefHeight="60.0" prefWidth="1055.0" spacing="70.0" styleClass="nav-background" stylesheets="@../css/dashboard.css" GridPane.vgrow="NEVER">
                <children>
-                  <JFXButton fx:id="homeBtn" contentDisplay="GRAPHIC_ONLY" prefHeight="60.0" prefWidth="81.0" text=" ">
+                  <JFXButton fx:id="homeBtn" contentDisplay="GRAPHIC_ONLY" onAction="#homeBtn" prefHeight="60.0" prefWidth="81.0" text=" ">
                      <graphic>
                         <ImageView fitHeight="47.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -40,27 +39,27 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton fx:id="itemBtn" prefHeight="50.0" prefWidth="181.0" text="ITEMS" textFill="WHITE">
+                  <JFXButton fx:id="itemBtn" onAction="#itemBtn" prefHeight="50.0" prefWidth="181.0" text="ITEMS" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="23.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="customerBtn" prefHeight="50.0" prefWidth="190.0" text="CUSTOMER" textFill="WHITE">
+                  <JFXButton fx:id="customerBtn" onAction="#customerBtn" prefHeight="50.0" prefWidth="190.0" text="CUSTOMER" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="23.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="orderBtn" prefHeight="50.0" prefWidth="177.0" text="ORDERS" textFill="WHITE">
+                  <JFXButton fx:id="orderBtn" onAction="#orderBtn" prefHeight="50.0" prefWidth="177.0" text="ORDERS" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="23.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="employeeBtn" prefHeight="50.0" prefWidth="151.0" text="EMPLOYEE" textFill="WHITE">
+                  <JFXButton fx:id="employeeBtn" onAction="#employeeBtn" prefHeight="50.0" prefWidth="151.0" text="EMPLOYEE" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="23.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="userBtn" contentDisplay="GRAPHIC_ONLY" layoutX="179.0" layoutY="11.0" prefHeight="60.0" prefWidth="81.0" text=" ">
+                  <JFXButton fx:id="userBtn" contentDisplay="GRAPHIC_ONLY" layoutX="179.0" layoutY="11.0" onAction="#userBtn" prefHeight="60.0" prefWidth="81.0" text=" ">
                      <graphic>
                         <ImageView fitHeight="47.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -179,7 +178,7 @@
                      <children>
                         <HBox prefHeight="0.0" prefWidth="806.0">
                            <children>
-                              <JFXButton fx:id="pendingOrdersBtn" buttonType="RAISED" prefHeight="49.0" prefWidth="219.0" style="-fx-background-color: #fcb900; -fx-background-radius: 50;" text="Pending" textFill="WHITE">
+                              <JFXButton fx:id="pendingOrdersBtn" buttonType="RAISED" onAction="#pendingOrdersBtn" prefHeight="49.0" prefWidth="219.0" style="-fx-background-color: #fcb900; -fx-background-radius: 50;" text="Pending" textFill="WHITE">
                                  <font>
                                     <Font size="27.0" />
                                  </font>
@@ -190,7 +189,7 @@
                                     <Insets right="30.0" top="10.0" />
                                  </HBox.margin>
                               </JFXButton>
-                              <JFXButton fx:id="completedOrdersBtn" buttonType="RAISED" prefHeight="57.0" prefWidth="271.0" style="-fx-background-color: #fcb900; -fx-background-radius: 50;" text="Completed" textFill="WHITE">
+                              <JFXButton fx:id="completedOrdersBtn" buttonType="RAISED" onAction="#completedOrdersBtn" prefHeight="57.0" prefWidth="271.0" style="-fx-background-color: #fcb900; -fx-background-radius: 50;" text="Completed" textFill="WHITE">
                                  <font>
                                     <Font size="27.0" />
                                  </font>

@@ -1,6 +1,5 @@
 package controller;
 
-import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,52 +9,17 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class DashboardController {
-    public BorderPane dashboardPane;
-    @FXML
-    private JFXButton homeBtn;
+public class CustomerController {
 
-    @FXML
-    private JFXButton itemBtn;
+    public BorderPane customerPane;
 
-    @FXML
-    private JFXButton customerBtn;
-
-    @FXML
-    private JFXButton orderBtn;
-
-    @FXML
-    private JFXButton employeeBtn;
-
-    @FXML
-    private JFXButton userBtn;
-
-    @FXML
-    private JFXButton addCustomerBtn;
-
-    @FXML
-    private JFXButton addItemBtn;
-
-    @FXML
-    private JFXButton addEmployeeBtn;
-
-    @FXML
-    private JFXButton placeOrderBtn;
-
-    @FXML
-    private JFXButton pendingOrdersBtn;
-
-    @FXML
-    private JFXButton completedOrdersBtn;
-
-    @FXML
-    void completedOrdersBtn(ActionEvent event) {
+    public void deleteBtn(ActionEvent actionEvent) {
 
     }
 
     @FXML
     void customerBtn(ActionEvent event) {
-        Stage stage = (Stage) dashboardPane.getScene().getWindow();
+        Stage stage = (Stage) customerPane.getScene().getWindow();
 
         try {
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/CustomerFrame.fxml"))));
@@ -69,7 +33,7 @@ public class DashboardController {
 
     @FXML
     void employeeBtn(ActionEvent event) {
-        Stage stage = (Stage) dashboardPane.getScene().getWindow();
+        Stage stage = (Stage) customerPane.getScene().getWindow();
 
         try {
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/EmployeeFrame.fxml"))));
@@ -81,7 +45,7 @@ public class DashboardController {
 
     @FXML
     void homeBtn(ActionEvent event) {
-        Stage stage = (Stage) dashboardPane.getScene().getWindow();
+        Stage stage = (Stage) customerPane.getScene().getWindow();
 
         try {
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Dashboard.fxml"))));
@@ -93,7 +57,7 @@ public class DashboardController {
 
     @FXML
     void itemBtn(ActionEvent event) {
-        Stage stage = (Stage) dashboardPane.getScene().getWindow();
+        Stage stage = (Stage) customerPane.getScene().getWindow();
 
         try {
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/ItemFrame.fxml"))));
@@ -104,8 +68,8 @@ public class DashboardController {
     }
 
     @FXML
-    void orderBtn(ActionEvent event) {
-        Stage stage = (Stage) dashboardPane.getScene().getWindow();
+    void ordersBtn(ActionEvent event) {
+        Stage stage = (Stage) customerPane.getScene().getWindow();
 
         try {
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/OrdersFrame.fxml"))));
@@ -113,15 +77,5 @@ public class DashboardController {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    @FXML
-    void pendingOrdersBtn(ActionEvent event) {
-
-    }
-
-    @FXML
-    void userBtn(ActionEvent event) {
-
     }
 }
