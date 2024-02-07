@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="783.0" prefWidth="1338.0" style="-fx-background-color: #2eaa9e;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="77.33333587646484" minHeight="60.0" prefHeight="77.33333587646484" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="828.6666870117188" minHeight="10.0" prefHeight="819.6666641235352" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="68.0" minHeight="57.33331298828125" prefHeight="57.33331298828125" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <HBox alignment="CENTER" maxHeight="60.0" minHeight="60.0" prefHeight="60.0" prefWidth="1055.0" spacing="70.0" styleClass="nav-background" stylesheets="@../css/dashboard.css" GridPane.vgrow="NEVER">
+               <children>
+                  <JFXButton contentDisplay="GRAPHIC_ONLY" prefHeight="60.0" prefWidth="81.0" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="47.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="itemBtn" prefHeight="50.0" prefWidth="181.0" text="ITEMS" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton prefHeight="50.0" prefWidth="190.0" text="CUSTOMER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton prefHeight="50.0" prefWidth="177.0" text="ORDERS" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton prefHeight="50.0" prefWidth="151.0" text="EMPLOYEE" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="179.0" layoutY="11.0" prefHeight="60.0" prefWidth="81.0" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="47.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/profile-pic.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" maxHeight="60.0" minHeight="0.0" prefHeight="0.0" prefWidth="1328.0" styleClass="nav-background" stylesheets="@../css/dashboard.css" GridPane.rowIndex="2">
+               <children>
+                  <Label text="Time : " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="31.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1333.0" layoutY="17.0" text="11:56:23 PM     " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="31.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1333.0" layoutY="17.0" text="Date : " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="31.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1333.0" layoutY="17.0" text=" 2/07/2024" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="31.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <GridPane prefHeight="829.0" GridPane.rowIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="1333.3333740234375" minWidth="10.0" prefWidth="1105.666748046875" />
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="296.333251953125" minWidth="227.0" prefWidth="232.333251953125" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="632.0" spacing="50.0" style="-fx-background-color: #6fcec9; -fx-background-radius: 20;" GridPane.columnIndex="1">
+                     <children>
+                        <JFXButton buttonType="RAISED" prefHeight="58.0" prefWidth="295.0" style="-fx-background-color: #fcb900; -fx-background-radius: 50;" text="Update" textFill="WHITE">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                           <effect>
+                              <Shadow blurType="GAUSSIAN" color="#000000da" height="192.04" radius="84.63499999999999" width="148.5" />
+                           </effect>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" prefHeight="49.0" prefWidth="292.0" style="-fx-background-color: #fcb900; -fx-background-radius: 50;" text="Add Employee" textFill="WHITE">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                           <effect>
+                              <Shadow blurType="GAUSSIAN" color="#000000da" height="192.04" radius="84.63499999999999" width="148.5" />
+                           </effect>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets left="4.0" top="6.0" />
+                     </padding>
+                  </VBox>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="325.0" minHeight="10.0" prefHeight="119.66667175292969" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="545.3333282470703" minHeight="10.0" prefHeight="545.3333282470703" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TableView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TableView>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                           <children>
+                              <JFXTextField prefHeight="61.0" prefWidth="1191.0" promptText="Search Employee" style="-fx-background-color: white; -fx-background-radius: 8;" />
+                              <JFXButton buttonType="RAISED" prefHeight="57.0" prefWidth="595.0" style="-fx-background-color: #fcb900; -fx-background-radius: 50;" text="Search" textFill="WHITE">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                                 <effect>
+                                    <Shadow blurType="GAUSSIAN" color="#000000da" height="192.04" radius="84.63499999999999" width="148.5" />
+                                 </effect>
+                              </JFXButton>
+                           </children>
+                           <padding>
+                              <Insets right="50.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

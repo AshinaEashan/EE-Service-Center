@@ -1,5 +1,3 @@
-package edu.ashina;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -15,9 +13,9 @@ public class AppInitializer extends Application {
     @Override
     public void start(Stage primarystage){
         try {
-            primarystage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../../view/DashboardFrame.fxml"))));
+            primarystage.setScene(new Scene(FXMLLoader.load(getClass().getResource("view/Dashboard.fxml"))));
             primarystage.centerOnScreen();
-            primarystage.setTitle("Dashboard");
+            primarystage.setTitle("E & E Service Center");
             primarystage.show();
         } catch (IOException e) {
             throw new RuntimeException(e);
