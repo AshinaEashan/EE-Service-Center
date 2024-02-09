@@ -10,5 +10,5 @@ public interface CustomerBo extends SuperBo {
     boolean saveCustomer (CustomerDto dto);
     boolean updateCustomer (CustomerDto dto);
     boolean deleteCustomer (String value);
-    List<CustomerDto> getAll();
+    List<CustomerDto> allCustomer();
 }

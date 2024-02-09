@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="413.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerUpdateFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="168.0" layoutY="27.0" prefHeight="66.0" prefWidth="264.0" text="Customer Form " textAlignment="CENTER" AnchorPane.leftAnchor="168.0" AnchorPane.rightAnchor="168.0">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="92.0" layoutY="147.0" prefHeight="45.0" prefWidth="191.0" text="Name                     :" textAlignment="CENTER" AnchorPane.leftAnchor="92.0" AnchorPane.rightAnchor="317.0">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="92.0" layoutY="202.0" prefHeight="45.0" prefWidth="199.0" text="Phone Number      :" textAlignment="CENTER" AnchorPane.leftAnchor="92.0" AnchorPane.rightAnchor="317.0">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="92.0" layoutY="257.0" prefHeight="45.0" prefWidth="191.0" text="Email                      :" textAlignment="CENTER" AnchorPane.leftAnchor="92.0" AnchorPane.rightAnchor="317.0">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="nameTxt" layoutX="300.0" layoutY="154.0" prefHeight="38.0" prefWidth="199.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="101.0" />
+      <JFXTextField fx:id="phoneNUmberTxt" layoutX="300.0" layoutY="206.0" prefHeight="38.0" prefWidth="199.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="101.0" />
+      <JFXTextField fx:id="emailTxt" layoutX="300.0" layoutY="261.0" prefHeight="38.0" prefWidth="199.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="101.0" />
+      <JFXButton buttonType="RAISED" layoutX="436.0" layoutY="330.0" onAction="#saveBtn" prefHeight="38.0" prefWidth="126.0" style="-fx-background-color: #fcb900; -fx-background-radius: 50;" text="Save" textFill="WHITE" AnchorPane.leftAnchor="436.0" AnchorPane.rightAnchor="38.0">
+         <font>
+            <Font size="27.0" />
+         </font>
+         <effect>
+            <Shadow blurType="GAUSSIAN" color="#000000da" height="192.04" radius="84.63499999999999" width="148.5" />
+         </effect>
+      </JFXButton>
+      <Label alignment="CENTER" layoutX="92.0" layoutY="109.0" prefHeight="45.0" prefWidth="191.0" text="ID                           :" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="idTxt" layoutX="300.0" layoutY="116.0" prefHeight="38.0" prefWidth="199.0" />
+   </children>
+</AnchorPane>

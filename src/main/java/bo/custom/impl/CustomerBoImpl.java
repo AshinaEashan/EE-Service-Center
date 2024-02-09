@@ -7,19 +7,20 @@ import dao.util.DaoTypes;
 import dto.CustomerDto;
 import entity.Customer;
 
-import javax.swing.text.html.parser.Entity;
 import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerBoImpl implements CustomerBo {
     private CustomerDao customerDao = DaoFactory.getInstance().getDao(DaoTypes.CUSTOMER);
+
+
     @Override
     public boolean saveCustomer(CustomerDto dto) {
 
         return customerDao.save(
                new Customer(
                        dto.getName(),
-                       dto.getPhoneNUmber(),
+                       dto.getPhoneNumber(),
                        dto.getEmail()
                )
         );
@@ -30,7 +31,7 @@ public class CustomerBoImpl implements CustomerBo {
         return customerDao.save(
                 new Customer(
                         dto.getName(),
-                        dto.getPhoneNUmber(),
+                        dto.getPhoneNumber(),
                         dto.getEmail()
                 )
         );
@@ -43,7 +44,7 @@ public class CustomerBoImpl implements CustomerBo {
     }
 
     @Override
-    public List<CustomerDto> getAll() {
+    public List<CustomerDto> allCustomer() {
         List<Customer> entityList = customerDao.getAll();
 
         List<CustomerDto> customerList = new ArrayList<>();

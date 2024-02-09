@@ -1,22 +1,22 @@
-package dto;
+package dto.tm;
 
-public class CustomerDto {
+import com.jfoenix.controls.JFXButton;
+import javafx.scene.control.Button;
+
+public class CustomerTm {
+
     private Long id;
     private String name;
     private String phoneNumber;
     private String email;
+    private Button btn;
 
-
-    public CustomerDto(Long id, String name, String phoneNumber, String email) {
+    public CustomerTm(Long id, String name, String phoneNumber, String email, Button btn) {
         this.id = id;
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.email = email;
-    }
-    public CustomerDto( String name, String phoneNumber, String email) {
-        this.name = name;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
+        this.btn = btn;
     }
 
     public Long getId() {
@@ -49,5 +49,13 @@ public class CustomerDto {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Button getBtn() {
+        return btn;
+    }
+
+    public void setBtn(Button btn) {
+        this.btn = btn;
     }
 }
